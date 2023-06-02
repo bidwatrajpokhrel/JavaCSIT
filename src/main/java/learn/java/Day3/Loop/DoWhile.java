@@ -1,5 +1,7 @@
 package learn.java.Day3.Loop;
 
+import learn.java.Day4.Teacher;
+
 import java.util.Scanner;
 
 public class DoWhile {
