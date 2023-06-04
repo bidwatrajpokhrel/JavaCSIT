@@ -1,4 +1,4 @@
-package learn.java.Day5.Day6;
+package learn.java.Day6;
 
 public enum Currency {
     USD(1f),
