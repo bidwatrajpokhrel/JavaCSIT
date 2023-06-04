@@ -1,4 +1,4 @@
-package learn.java.Day5.Day6;
+package learn.java.Day6;
 
 import learn.java.Day5.Array.Array;
 
