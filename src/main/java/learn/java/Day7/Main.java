@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
         List<Student> students = new ArrayList<Student>();
 
-        addStudent("Sumit", 4.0f, List.of(Course.ARCHITECTURE, Course.DSA), students);
+        addStudent("                    Sumit Shrestha      ", 4.0f, List.of(Course.ARCHITECTURE, Course.DSA), students);
         addStudent("Arjun", 3.9f, List.of(Course.JAVA, Course.STATISTICS, Course.GRAPHICS), students);
         addStudent("Student1", 3.9f, List.of(Course.STATISTICS, Course.JAVA), students);
         addStudent("Student2", 3.5f, List.of(Course.ARCHITECTURE, Course.DSA), students);
@@ -16,7 +16,8 @@ public class Main {
         addStudent("Student5", 1.8f, List.of(Course.DSA, Course.ARCHITECTURE), students);
         addStudent("Student6", 4.0f, List.of(Course.GRAPHICS, Course.FRONTEND), students);
 
-//        searchStudent(4, students);
+//        System.out.println(Student.getStudentCount());
+        searchStudent(1, students);
 
         HashSet<Course> coursesTakenByAllStudents = new HashSet<>();
         for (Student student : students) {
