@@ -35,7 +35,7 @@ public class Student {
     }
 
     public void setGpa(Float gpa) {
-        if(gpa > 4.0 || gpa < 0.0) {
+        if (gpa > 4.0 || gpa < 0.0) {
             System.out.println("Invalid GPA");
         }
         this.gpa = gpa;
@@ -54,7 +54,7 @@ public class Student {
         this.courses.add(course);
     }
 
-    public void addMultipleCourses(List<Course> courses) {
+    public void addCourse(List<Course> courses) {
         this.courses.addAll(courses);
     }
 

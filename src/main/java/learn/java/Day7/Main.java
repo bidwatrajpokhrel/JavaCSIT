@@ -33,7 +33,7 @@ public class Main {
 
     public static void addStudent(String name, Float gpa, List<Course> courses, List<Student> students) {
         Student student = new Student(name, gpa);
-        student.addMultipleCourses(courses);
+        student.addCourse(courses);
 
         students.add(student);
     }

@@ -1,4 +1,7 @@
 package learn.java.Day9.animalKingdom;
 
-public class Pegion {
+public class Pigeon extends Bird {
+    Pigeon(){
+        super("Pigeons");
+    }
 }
