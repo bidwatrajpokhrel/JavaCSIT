@@ -1,0 +1,2 @@
+"pema,chabahil,2002-11-07".split(,) => ["pema","chabahil","2002-11-07"]
+
