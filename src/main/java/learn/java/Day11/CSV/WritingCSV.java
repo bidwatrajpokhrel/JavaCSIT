@@ -43,5 +43,3 @@ public class WritingCSV {
     }
 }
 
-
-// Only add a newline if the file already exists and isn't empty

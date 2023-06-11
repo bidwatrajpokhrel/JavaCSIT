@@ -6,7 +6,7 @@ import java.util.List;
 public class Student {
     private static Integer studentCount = 0;
 
-    Student(String name, Float gpa) {
+    Student(String name, Float gpa) throws Exception {
         this.setName(name);
         this.setGpa(gpa);
         this.id = ++studentCount;
@@ -34,9 +34,9 @@ public class Student {
         return this.gpa;
     }
 
-    public void setGpa(Float gpa) {
+    public void setGpa(Float gpa) throws Exception {
         if (gpa > 4.0 || gpa < 0.0) {
-            System.out.println("Invalid GPA");
+            throw new Exception("Invalid GPA");
         }
         this.gpa = gpa;
         this.passing = this.gpa > Constants.PASSING_GPA;

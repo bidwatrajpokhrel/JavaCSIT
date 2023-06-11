@@ -7,17 +7,17 @@ public class Main {
     public static void main(String[] args) {
         List<Student> students = new ArrayList<Student>();
 
-        addStudent("                    Sumit Shrestha      ", 4.0f, List.of(Course.ARCHITECTURE, Course.DSA), students);
+        addStudent("Sumit Shrestha", 4.5f, List.of(Course.ARCHITECTURE, Course.DSA), students);
         addStudent("Arjun", 3.9f, List.of(Course.JAVA, Course.STATISTICS, Course.GRAPHICS), students);
-        addStudent("Student1", 3.9f, List.of(Course.STATISTICS, Course.JAVA), students);
-        addStudent("Student2", 3.5f, List.of(Course.ARCHITECTURE, Course.DSA), students);
+        addStudent("Student1", 4.2f, List.of(Course.STATISTICS, Course.JAVA), students);
+        addStudent("Student2", -1f, List.of(Course.ARCHITECTURE, Course.DSA), students);
         addStudent("Student3", 2.0f, List.of(Course.GRAPHICS, Course.FRONTEND), students);
         addStudent("Student4", 3.6f, List.of(Course.STATISTICS, Course.JAVA), students);
         addStudent("Student5", 1.8f, List.of(Course.DSA, Course.ARCHITECTURE), students);
         addStudent("Student6", 4.0f, List.of(Course.GRAPHICS, Course.FRONTEND), students);
 
 //        System.out.println(Student.getStudentCount());
-        searchStudent(1, students);
+//        searchStudent(1, students);
 
         HashSet<Course> coursesTakenByAllStudents = new HashSet<>();
         for (Student student : students) {
@@ -32,10 +32,14 @@ public class Main {
     }
 
     public static void addStudent(String name, Float gpa, List<Course> courses, List<Student> students) {
-        Student student = new Student(name, gpa);
-        student.addCourse(courses);
+        try {
+            Student student = new Student(name, gpa);
+            student.addCourse(courses);
 
-        students.add(student);
+            students.add(student);
+        } catch (Exception e) {
+            System.out.println(e.getMessage() + " for student " + name);
+        }
     }
     
     public static Student searchStudent(Integer id, List<Student> students) {
