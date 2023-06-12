@@ -4,11 +4,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Student {
-    private static Integer studentCount = 0;
+    private static Integer idIncrementer = 0;
 
     Student(String name) {
         this.setName(name);
-        this.id = ++studentCount;
+        this.id = ++idIncrementer;
+    }
+
+    public Student(Integer id, String name) {
+        this.setName(name);
+        this.id = id;
+        idIncrementer = id;
     }
 
     private String name;
@@ -41,7 +47,4 @@ public class Student {
         return this.books;
     }
 
-    public static Integer getStudentCount() {
-        return studentCount;
-    }
 }

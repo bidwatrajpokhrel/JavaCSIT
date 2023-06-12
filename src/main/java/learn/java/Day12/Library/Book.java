@@ -41,6 +41,6 @@ public class Book {
 
     @Override
     public String toString() {
-        return "| Name: " +   this.getName() + ", author: " + this.getAuthor();
+        return this.getName();
     }
 }

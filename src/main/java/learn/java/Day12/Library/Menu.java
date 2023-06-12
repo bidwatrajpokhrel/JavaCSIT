@@ -49,7 +49,7 @@ public class Menu {
     public static void handleEnrollStudent(Scanner scanner) {
         System.out.print(MenuConstants.studentEnrollmentMessageInitial);
 
-        String name = scanner.next();
+        String name = scanner.nextLine();
 
         Student student = LibraryManagement.addStudent(name);
 
